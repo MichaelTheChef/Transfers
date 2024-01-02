@@ -4,7 +4,7 @@ import uuid
 
 # Connect
 
-client = pymongo.MongoClient('mongodb+srv://michaaelexe:Stown0414@cluster0.kj7dphx.mongodb.net')
+client = pymongo.MongoClient('mongodb+srv://')
 db = client.Molex
 
 levels = ["molex", "transfers", "training", "system"]
