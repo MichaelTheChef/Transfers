@@ -25,13 +25,13 @@ class Predict:
 
                 if bool_sources:
                     for i in range(len(bool_sources)):
-                        self.file_source_predictions.append(self.recent_file_df.iloc[[bool_sources[i][1]], 0])
+                        self.file_source_predictions.append(self.recent_file_df.iloc[(bool_sources[i][1]), 0])
                 else:
                     print("No source predictions")
 
                 if bool_dests:
                     for i in range(len(bool_dests)):
-                        self.file_dest_predictions.append(self.recent_file_df.iloc[[bool_dests[i][1]], 1])
+                        self.file_dest_predictions.append(self.recent_file_df.iloc[(bool_dests[i][1]), 1])
                 else:
                     print("No destination predictions")
 
@@ -51,19 +51,19 @@ class Predict:
 
                 if bool_sources:
                     for i in range(len(bool_sources)):
-                        self.network_source_predictions.append(self.recent_network_df.iloc[[bool_sources[i][1]], 0])
+                        self.network_source_predictions.append(self.recent_network_df.iloc[(bool_sources[i][1]), 0])
                 else:
                     print("No network source predictions")
 
                 if bool_dests:
                     for i in range(len(bool_dests)):
-                        self.network_dest_predictions.append(self.recent_network_df.iloc[[bool_dests[i][1]], 1])
+                        self.network_dest_predictions.append(self.recent_network_df.iloc[(bool_dests[i][1]), 1])
                 else:
                     print("No network destination predictions")
 
                 if bool_ports:
                     for i in range(len(bool_ports)):
-                        self.network_port_predictions.append(self.recent_network_df.iloc[[bool_ports[i][1]], 2])
+                        self.network_port_predictions.append(self.recent_network_df.iloc[[(bool_ports[i][1]), 2])
                 else:
                     print("No network port predictions")
 
@@ -84,11 +84,11 @@ class Predict:
 
         else:
             print("No files to predict")
-            
+
     def get_predictions(self, transfer_type: str):
         if transfer_type == "file":
             return self.file_source_predictions, self.file_dest_predictions
-        
+
         elif transfer_type == "network":
             return self.network_source_predictions, self.network_dest_predictions, self.network_port_predictions
 
