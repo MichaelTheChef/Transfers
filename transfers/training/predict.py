@@ -63,7 +63,7 @@ class Predict:
 
                 if bool_ports:
                     for i in range(len(bool_ports)):
-                        self.network_port_predictions.append(self.recent_network_df.iloc[[(bool_ports[i][1]), 2])
+                        self.network_port_predictions.append(self.recent_network_df.iloc[(bool_ports[i][1]), 2])
                 else:
                     print("No network port predictions")
 
